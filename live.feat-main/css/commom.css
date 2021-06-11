@@ -1,0 +1,170 @@
+body {
+    margin: 0;
+    background: rgb(236, 236, 236);
+    font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro", "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "メイリオ", sans-serif;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    background: rgb(148, 148, 148);
+    height: 60px;
+    align-items: center;
+    box-shadow: 0 1px 3px rgba(117, 117, 117, 0.397);
+    /* border-bottom: 1px solid rgba(136, 133, 133, 0.164) ; */
+}
+
+.logo img {
+    height: 60px;
+    padding-top: 5px;
+}
+
+.logo {
+    margin: 0 auto;
+}
+.header_menu {
+    color: #fff;
+    position: absolute;
+    left: 80px;
+    display: flex;
+    justify-content: center;
+    user-select: none;
+}
+
+/* #close {
+    position: absolute;
+   
+    pointer-events: none;
+} */
+
+.person {
+    color: #fff;
+    position: absolute;
+    right: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.person p {
+    font-size: 14px;
+}
+.person p span {
+    margin-left: 20px;
+}
+
+.person a {
+    height: 20px;
+}
+
+.person #person {
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 6px;
+    margin-right: 20px;
+}
+
+.header_menu #open {
+    font-size: 20px;
+}
+#close:hover, #open:hover, #person:hover {
+    cursor: pointer;
+    text-shadow: -4px 2px 12px rgba(0, 195, 255, 0.83), 4px -2px 12px rgba(0, 195, 255, 0.83);
+	transition: 1s;
+}
+
+/* body part */
+
+/* side menu */
+.side_menu {
+    position: fixed;
+    width: 180px;
+    background: rgb(219, 177, 86);
+    top: 60px;
+    bottom: 0;
+    box-shadow:  5px 0 5px rgba(97, 96, 96, 0.246), 0 2px 4px rgba(34, 33, 33, 0.246) inset ;
+    border-top: 1px solid rgba(83, 81, 81, 0.164);
+    transition: transform .5s;
+}
+
+.side_menu nav img {
+    width: 60px;
+    display: block;
+    margin: 0 auto;
+
+}
+
+.side_nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-left: 25px;
+    padding-top: 10px;
+}
+
+.side_menu nav {
+    padding-top: 10px;
+}
+
+.side_nav li a {
+    font-size: 10px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.side_nav li + li {
+    margin-top: 20px;
+}
+
+
+
+
+.side_icon {
+    position: absolute;
+    font-size: 14px;
+    color: #fff;
+    width: 80px;
+    display: flex;
+    justify-content: space-around;
+    bottom: 25px;
+    left: 25px;
+}
+
+/* side menu js */
+
+#sidemenu.hidden {
+    transform: translate(-500px, 0);
+}
+
+#open.hidden {
+    display: none;
+}
+
+.personal_info {
+    position: absolute;
+    background: rgba(219, 155, 18, 0.884);
+    top: 60px;
+    right: 0px;
+    box-shadow:  5px 0 5px rgba(97, 96, 96, 0.246), 0 2px 4px rgba(34, 33, 33, 0.246) inset;
+    border-top: 1px solid rgba(83, 81, 81, 0.164);
+    border-radius:  0 0 0 25px;
+    display: none;
+}
+.personal_info ul {
+    list-style-type: none;
+    font-size: 0;
+    padding: 0;
+    margin: 0;
+    margin: 30px 20px 40px 20px;
+}
+.personal_info ul li + li {
+    margin-top: 6px;
+}
+.personal_info ul li {
+    font-size: 16px;
+    color: #fff; 
+}
+.personal_info ul #sub_date {
+    font-size: 12px;
+}

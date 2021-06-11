@@ -1,0 +1,157 @@
+.payment_container {
+    /* background: blue; */
+    color: rgb(20, 64, 94);
+    width: 600px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+.payment_container_head {
+    text-align: center;
+}
+
+.payment_container_head h1 {
+    margin: 0;
+    font-size: 28px;
+    height: 45px;
+}
+.payment_container_head p {
+    margin: 0;
+    font-size: 12px;
+}
+
+.payment_logo_area {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.payment_logo {
+    background: white;
+    width: 180px;
+    height: 80px;
+    display: flex;
+    border-radius: 3px;
+    cursor: pointer;
+    
+}
+
+
+.payment_logo i {
+    margin: auto auto;
+    font-size: 40px;
+}
+.payment_logo h2 {
+    margin: 0;
+}
+
+.radio input[type="radio"]:checked + .payment_logo {
+    background-color: rgb(29, 91, 133);
+    color: #fff;
+    border-radius: 5px;
+    transition: .4s;
+}
+.radio input {
+    display: none;
+}
+
+
+
+.info_area {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.info_area h3 {
+    font-size: 14px;
+    margin: 0;
+}
+
+.info_area h4 {
+    margin: 0;
+    font-size: 8px;
+}
+
+.info_area input {
+    height: 26px;
+    border: solid 1px rgb(20, 64, 94);
+    border-radius: 3px;
+}
+
+.info_area span {
+    font-size: 10px;
+}
+
+.mid_forms input {
+    width: 90px;
+}
+
+.mid_forms {
+    display: flex;
+}
+
+.form {
+    height: 60px;
+}
+
+.form h4 {
+    position: relative;
+    top: 15px;
+}
+
+.up_forms input, .bottom_forms input {
+    width: 200px;
+} 
+.mid_forms .form {
+    margin-right: 11px;
+}
+
+.top_forms {
+    display: flex;
+    height: 60px;
+}
+
+.top_forms input {
+    width: 155px;
+}
+.top_forms i {
+    font-size: 35px;
+    margin-top: 29px;
+    margin-left: 5px;
+}
+.down_forms input {
+    width: 90px;
+}
+
+.submit {
+    margin: 0 auto;
+    margin-top: 40px;
+    text-align: center
+}
+
+.submit input {
+    padding: 7px 15px;
+    color: #fff;
+    background-color:  rgb(18, 57, 83);
+    border: none;
+    border-radius: 3px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.submit input:hover {
+    opacity: 0.9;
+}
+
+
+
+
+
+
+
+
+
+
+
+

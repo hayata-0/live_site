@@ -1,0 +1,247 @@
+.sub_container {
+    margin: 130px auto;
+    background-color: #fff;
+    color: rgb(20, 64, 94);
+    height: 293px;
+    width: 600px;
+    display: flex;
+    box-shadow: 0 0 15px rgba(187, 187, 187, 0.3);
+}
+
+
+
+.plice {
+    background-color: rgb(236, 236, 236);
+    display: flex;
+    height: 97px;
+    width: 170px;
+    align-items: center;
+
+}
+.plice + .plice {
+    margin-top: 1px;
+}
+
+.plices {
+    margin-left: auto;
+}
+
+.per_month {
+    height: 48px;
+    margin-left: 20px;
+    position: relative;
+}
+
+.per_month h3 {
+    position: absolute;
+    top: 4px;
+    margin: 0;
+    font-size: 15px;
+    
+}
+
+.per_month span {
+    position: absolute;
+    bottom: 4px;
+    left: 3px;
+    font-size: 13px;
+    letter-spacing: -1px;
+}
+
+
+.circle {
+    background-color: #fff;
+    height: 25px;
+    align-items: center;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.circle:hover {
+    background-color: rgba(0, 0, 0, 0.048);
+}
+.sub_sentence {
+    height: 230px;
+    width: 350px;
+    margin-top: 55px;
+    margin-left: 57px;
+}
+
+.sub_sentence h1, .sub_sentence h2, .sub_sentence p {
+    margin: 0;
+    
+}
+
+.sub_sentence h1 {
+    font-size: 28px;
+}
+
+.sub_sentence h2 {
+    font-size: 14px;
+    width: 280px;
+    margin-top: 8px;
+}
+
+.sub_sentence p {
+    font-size: 11px;
+    width: 300px;
+    margin-top: 25px;
+}
+
+#mask {
+    background: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+#modal {
+    background: #fff;
+    width: 300px;
+    height: 200px;
+    padding: 10px;
+    border-radius: 3px;
+    position: absolute;
+    top: 200px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    color: rgb(20, 64, 94);
+    transition: opacity 0.4s;
+
+}
+
+#modal p {
+    font-weight: bold;
+}
+
+#modal h1 {
+    font-size: 30px;
+    transition: transform 0.5s;
+}
+
+#modal a {
+    text-decoration: none;
+}
+
+#modal > span {
+    float: right;
+    cursor: pointer;
+}
+
+#jump {
+    background: rgb(28, 87, 126);
+    width: 100px;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 0 auto;
+    color: #fff;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+#jump:hover {
+    margin-top: 28px;
+}
+
+#modal h1, #modal p {
+    text-align: center;
+}
+
+#mask.hidden {
+    display: none;
+}
+
+#modal.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#modal.hidden h1 {
+    opacity: 0;
+    transform: translateY(16px);
+    
+}
+
+
+
+footer {
+    position: absolute;
+    background-color: rgb(148, 148, 148);
+    height: 150px;
+    width: 100%;
+    bottom: 0;
+    z-index: -1;
+    font-size: 10px;
+    color: #fff;
+}
+
+.footer_container {
+    display: flex;
+    margin-top: 30px;
+    margin-left: 40px;
+    width: 73%;
+    height: 100px;
+    justify-content: space-between;
+}
+
+.footer_box small, .footer_sub small {
+    display: block;
+}
+.footer_box {
+ height: 100px;   
+ width: 150px;
+}
+
+.footer_head {
+    margin-bottom: 10px;
+}
+
+.footer_mail input[type="email"] {
+    border: solid 1px rgb(20, 64, 94);
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 3px;
+    font-size: 11px;
+    color: #fff;
+   width: 120px; 
+   padding: 6px 8px;
+   margin-right: 10px;
+}
+
+.footer_mail input[type="submit"] {
+    color: rgb(20, 64, 94);
+    font-size: 10px;
+    font-weight: 700;
+    border: solid 1px #fff;
+    border-radius: 3px;
+    width: 78px;
+    padding: 6.5px 10px;
+    letter-spacing: -1px;
+    cursor: pointer;
+}
+
+.footer_mail {
+    margin-top: 10px;
+}
+
+.footer_sub :nth-child(2) {
+ color: rgb(20, 64, 94);
+ letter-spacing: -0.5px;
+ font-weight: bold;
+}
+
+.footer_mail input[type="email"]::placeholder {
+    color: rgba(255, 255, 255, 0.486);
+}
+
+.footer_mail input[type="email"]:focus {
+    outline: none;
+    
+
+}
+
+

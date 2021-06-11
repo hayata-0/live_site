@@ -1,0 +1,59 @@
+body {
+    background-image: url("../image/home01.png");
+    background-size: cover;
+    font-size: 16px;
+}
+
+.form {
+    display: block;
+    z-index: 1;
+    text-align: center;
+    margin-top: 16rem;
+}
+.form :nth-child(4) input {
+    padding: 0.7rem 2rem;
+    margin-top: 2rem;
+    border: none;
+    border-radius: 5px;
+    color: #FFF;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.form :nth-child(3) input:hover {
+    background-color: rgba(0, 0, 0, 0.685);
+
+}
+
+.top_input input {
+    padding: 1.5rem 7rem;
+    border: none;
+    border-radius: 5px;
+    color: #FFF;
+    background-color: rgba(0, 0, 0, 0.418);
+}
+
+.top_input input:focus, .form :nth-child(3) input:focus {
+    background-color: rgba(0, 0, 0, 0.644);
+    outline: none;
+
+}
+
+.form p {
+    margin: 0;
+}
+::placeholder {
+    color: rgba(255, 255, 255, 0.746);
+    font-size: 10px;
+    text-align: center;
+}
+
+.mist {
+    position: fixed;
+    backdrop-filter: blur(4px);
+    z-index: -2;
+    background-color: rgba(192, 191, 191, 0.274);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}

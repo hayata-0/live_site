@@ -1,0 +1,201 @@
+* {
+  box-sizing: border-box;
+}
+  
+html, body {
+  margin: 0 auto;
+  height: 100%;
+}
+  
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  background-color: #1d212b;
+  font-family: Lato, "Trebuchet MS", "Verdana", "sans-serif";
+}
+
+a {
+  text-decoration: none;
+}
+
+/*背景light*/
+.light {
+  position: relative;
+  margin:auto;
+}
+.light:after {
+  position: absolute;
+  content: '';
+  top: 2vw;
+  left: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  transform: scale(0.8);
+  transition-duration: 3.5s;
+  -webkit-filter: blur(5vw);
+  -moz-filter: blur(5vw);
+  -ms-filter: blur(5vw);
+  filter: blur(5vw);
+  background:
+    linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+    linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+    linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+  background-size: 200% 200%;
+  animation: animateGlow 10s ease infinite;
+}
+@keyframes animateGlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/*立方体*/
+.text {
+  display:inline-block;
+  position:relative;
+  left:50%;
+  top:50%;
+  transform:translateX(-50%) translateY(-50%);
+  font-size:28px;
+  animation: textColor 12s ease infinite;
+}
+@keyframes textColor {
+  0% {
+    color: #52e6c1;
+  }
+  25% {
+    color: #873ddb;
+  }
+  50% {
+    color: rgb(219, 86, 86);
+  }
+  75% {
+    color: rgb(219, 172, 85);
+  }
+  100% {
+    color: #52e6c1;
+  }
+}
+#scene {
+  perspective: 1000px;
+  width:200px;
+  height:200px;
+  position:relative;
+  top: 0;
+  left: 0;
+  margin: auto;
+}
+#boxBase {
+  transform-style:preserve-3d;
+  width:200px;
+  height:200px;
+  animation: turnAround 15s linear 0s infinite normal none running;
+}
+@keyframes turnAround {
+  0%{
+    transform:rotateX(0deg) rotateY(0deg);
+  }
+  100%{
+    transform:rotateX(360deg) rotateY(360deg);
+  }
+}
+#boxBase > div {
+  position:absolute;
+  background-color:#1518238f;
+  border:1px solid #151823;
+  border-radius: 5px;
+  width:198px;
+  height:198px;
+  cursor: grab;
+}
+#boxBase > div:hover {
+  background-color:rgba(41, 44, 53, 0.774);
+}
+#boxBase > div:hover > .text {
+  font-weight:bold;
+}
+#boxBase > .top {
+  transform:translateY(100px) rotateX(-90deg);
+}
+#boxBase > .bottom {
+  transform:translateY(-100px) rotateX(90deg);
+}
+#boxBase > .front {
+  transform:translateZ(100px);
+}
+#boxBase > .back {
+  transform:translateZ(-100px) rotateX(180deg);
+}
+#boxBase > .left {
+  transform:translateX(-100px) rotateY(-90deg);
+}
+#boxBase > .right {
+  transform:translateX(100px) rotateY(90deg);
+}
+
+/*ボタン*/
+#FeatBtn {
+  width: 120px;
+  height: 40px;
+  border-radius: 180px;
+  position: relative;
+  top: 0px;
+  margin: 0px auto 200px;
+  
+  background: linear-gradient(60deg, #db954f, #d37765, #df6587, #a166ab, #5073b8, #24abc0, #22bda8, #78cf8e);
+  cursor:pointer;
+  line-height:12px;
+  filter: drop-shadow(7px -2px 8px rgba(20, 20, 20, 0.719));
+}
+
+#FeatBtn:before {
+  content: '';
+  z-index: 1;
+  position: absolute;
+  display: block;
+  width: 80%;
+  height: 70%;
+  top: 15%;
+  left: 10%;
+  transition: 0.3s opacity ease-in-out;
+  filter: blur(15px);
+  opacity: 0;
+  background: linear-gradient(60deg, #db954f, #d37765, #df6587, #a166ab, #5073b8, #24abc0, #22bda8, #78cf8e);
+}
+
+#FeatBtn:hover:before {
+  opacity: 1;
+  transition: 0.3s opacity ease-in-out;
+  filter: blur(15px);
+  background: linear-gradient(60deg, #db954f, #d37765, #df6587, #a166ab, #5073b8, #24abc0, #22bda8, #78cf8e);
+  /*background: linear-gradient(60deg, #d37765,  #df6587, #a166ab, #5073b8, #24abc0, #22bda8, #78cf8e, #db954f);*/
+
+}
+
+#FeatBtn:after {
+  content: 'Feat !';
+  text-align: center;
+  line-height: 32px;
+  font-size: 18px;
+  color: rgba(235,235,235,1);
+  font-weight: bold;
+  z-index: 5;
+  position: absolute;
+  display: block;
+  border-radius: 180px;
+  width: 92%;
+  height: 80%;
+  top: 10%;
+  left: 4%;  
+  background-color: rgba(19, 20, 22, 0.897);
+}

@@ -1,0 +1,40 @@
+.title_section {
+    display: flex;
+    margin-top: 70px;
+}
+
+.pic {
+    background-color: rgb(212, 225, 230);
+    width: 520px;
+    height: 580px;
+    margin-left: 200px;
+    box-shadow: -4px -1px 3px rgba(175, 174, 174, 0.246);
+
+}
+
+.sentence {
+    text-align: center;
+    width: 700px;
+    color: rgb(87, 76, 55);
+}
+
+.sentence p {
+    font-size: 12px;
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+.sentence h2 {
+    font-size: 14px;
+    margin: 0;
+    margin-top: 5px;
+
+}
+
+h1 {
+    font-size: 32px;
+    font-weight:normal;
+    margin: 0;
+    margin-top: 80px;
+}

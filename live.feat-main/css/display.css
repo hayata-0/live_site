@@ -1,0 +1,123 @@
+* {margin: 0;}
+
+.main {
+    display: grid;
+
+    grid-template-columns: 230px 230px 230px 230px;
+    grid-template-rows: 265px 265px;
+    gap: 20px;
+    margin-top: 130px;
+    margin-left: 250px;
+    
+}
+
+.content {
+    width: 230px;
+}
+
+.pic {
+    background-color: rgb(212, 225, 230);
+    width: 230px;
+    height: 220px;
+}
+
+.underpic {
+    display: flex;
+    height: 45px;
+    background-color: rgb(63, 59, 59);
+    color: white;
+}
+
+.fav {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45px;
+    width: 20px;
+}
+
+.fav [type="checkbox"] {
+    display: none;
+}
+
+.heart {
+    user-select: none;
+    font-size: 16px;
+}
+
+.comment {
+    font-size: 16px;
+    line-height: 45px;
+    margin-left: 20px;
+    margin-top: 1px;
+
+}
+
+
+.fav [type="checkbox"]:checked ~ .heart {
+    animation: heart .6s forwards;
+}
+
+.riple {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: red;
+    border-radius: 50%;
+    transform: scale(0);
+}
+
+@keyframes heart {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+        color: red;
+    }
+}
+
+
+.fav [type="checkbox"]:checked ~ .riple {
+    animation: riple .6s forwards;
+}
+
+
+
+@keyframes riple {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+
+.favnum, .commentnum {
+    color: white;
+    font-size: 10px;
+    height: 45px;
+    align-items: center;
+    line-height: 45px;
+    margin-left: 5px;
+}
+
+.fav {
+    margin-left: 15px;
+}
+
+.share {
+    line-height: 45px;
+    font-size: 11px;
+    margin-left: auto;
+    margin-right: 15px;
+}

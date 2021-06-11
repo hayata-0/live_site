@@ -1,0 +1,49 @@
+<header>
+    <div class="header_menu">
+        <span class="material-icons" id="open">menu</span>
+        <!-- <span class="material-icons" id="close">close</span> -->
+    </div>
+
+    <div class="logo">
+        <img src="image/logo.png" alt="">
+    </div>
+
+    <div class="person">
+        <p>Welcome <span><?php echo $_SESSION["UserName"] ?></span></p>
+        <span class="material-icons" id="person">person</span>
+        <a id="logout" href="user_operation.php?sign"><img src="./image/logout.svg" alt="" width="20px" height="20px"></a>     
+    </div>
+</header>
+
+<div class="side_menu hidden" id="sidemenu">       
+    <nav>
+        <img src="image/logo.png" alt="">
+        <ul class="side_nav">
+            <li><a href="./subsucribe.php">FEED</a></li>
+            <li><a href="#">AUTHOR</a></li>
+            <li><a href="./display.php">EXPLOR</a></li>
+            <li><a href="#">BLOG</a></li>
+            <li><a href="#">CONTACT</a></li>
+        </ul>
+    </nav>
+
+    <div class="side_icon">
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-facebook-f"></i>
+    </div>
+</div>
+
+<div class="personal_info">
+    <ul>
+        <li>UserName: <?php echo $_SESSION["UserName"] ?></li>
+        <li>UserID: <?php echo $_SESSION["UserID"] ?></li>
+        <li>Email: <?php echo $_SESSION["Email"] ?></li>
+        <li>Ticket: <?php echo $_SESSION["User_subpass"] ?></li>
+        <?php
+            if($_SESSION["User_subpass"] == '期間中') {
+                echo '<li id="sub_date">'.$_SESSION["Subscribe"].'</li>';
+            }
+        ?>
+    </ul>
+</div>
